@@ -18,8 +18,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean(name = "encoder")
     public PasswordEncoder passwordEncoder(){
-        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-        return bCryptPasswordEncoder;
+        return new BCryptPasswordEncoder();
+
     }
 
     protected void configure(HttpSecurity http) throws Exception{
